@@ -30,7 +30,7 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p className="text-warm-cream/60 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          Operations systems for Austin&apos;s trade businesses — HVAC, plumbing, electrical, roofing, and landscaping.
+          Operations systems for Austin&apos;s trade businesses — HVAC, plumbing, electrical, roofing, remodeling, service, and landscaping.
           We set up the systems that answer every call, follow up on every lead, and ask every customer for a review.{" "}
           <span className="text-warm-cream/90 font-medium">AI does the heavy lifting. You don&apos;t have to learn it.</span>
         </p>
