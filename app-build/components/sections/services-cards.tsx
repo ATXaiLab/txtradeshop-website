@@ -59,7 +59,7 @@ const tiers = [
     ],
     price: "$8,950",
     priceNote: "setup + $750/mo × 3",
-    splitPay: "$8,750 total. Optional retainer from month 4 at $500–$750/mo.",
+    splitPay: "$8,750 total",
     bestFor: "$300K+ revenue",
     timeline: "6–8 weeks",
     roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",
@@ -128,16 +128,15 @@ export function ServicesCards() {
                     {tier.priceNote}
                   </div>
                 </div>
-                {tier.splitPay && (
-                  <p className={`text-xs mb-1 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
-                    or {tier.splitPay}
-                  </p>
-                )}
-                <p className={`text-xs mb-1 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
+                <div className="min-h-[1.25rem] mb-1">
+                  {tier.splitPay && (
+                    <p className={`text-xs ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
+                      or {tier.splitPay}
+                    </p>
+                  )}
+                </div>
+                <p className={`text-xs mb-5 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
                   Best for {tier.bestFor} · {tier.timeline}
-                </p>
-                <p className={`text-xs mb-5 italic ${tier.accent ? "text-warm-cream/35" : "text-charcoal-light"}`}>
-                  {tier.roi}
                 </p>
                 <Link
                   href="/services"
