@@ -59,7 +59,7 @@ const tiers = [
     ],
     price: "$8,950",
     priceNote: "setup + $750/mo × 3",
-    splitPay: "$11,150 total. Optional retainer from month 4 at $500–$750/mo.",
+    splitPay: "$8,750 total. Optional retainer from month 4 at $500–$750/mo.",
     bestFor: "$300K+ revenue",
     timeline: "6–8 weeks",
     roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",

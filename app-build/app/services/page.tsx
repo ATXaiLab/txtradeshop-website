@@ -78,7 +78,7 @@ const tiers = [
     notForList: ["Sub-$300K businesses — the ROI math doesn't work yet. Start smaller."],
     price: "$8,950", priceNote: "setup + $750/mo × 3", timeline: "6–8 weeks",
     roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",
-    splitPay: "$11,150 total. Optional retainer from month 4 at $500–$750/mo.",
+    splitPay: "$8,750 total. Optional retainer from month 4 at $500–$750/mo.",
     accent: false,
   },
 ];
@@ -240,7 +240,7 @@ export default function ServicesPage() {
                   <TableHead className="text-white font-semibold text-sm">Feature</TableHead>
                   <TableHead className="text-white font-semibold text-center text-sm">Foundation<br /><span className="text-warm-cream/50 text-xs font-normal">$895</span></TableHead>
                   <TableHead className="text-white font-semibold text-center text-sm">Growth Engine<br /><span className="text-warm-cream/50 text-xs font-normal">$2,750</span></TableHead>
-                  <TableHead className="text-white font-semibold text-center text-sm">Full Ops<br /><span className="text-warm-cream/50 text-xs font-normal">$11,150</span></TableHead>
+                  <TableHead className="text-white font-semibold text-center text-sm">Full Ops<br /><span className="text-warm-cream/50 text-xs font-normal">$8,750</span></TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
