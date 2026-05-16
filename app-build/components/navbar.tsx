@@ -41,8 +41,8 @@ export function Navbar() {
           <Image
             src="/logo-1.png"
             alt="TX Trade Shop"
-            width={1826}
-            height={565}
+            width={1874}
+            height={591}
             className="h-16 w-auto"
             priority
           />
