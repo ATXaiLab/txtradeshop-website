@@ -18,7 +18,7 @@ export function HeroSection() {
       />
       <div className="absolute top-0 left-0 right-0 h-px bg-dirt-orange/40" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-24 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-40 pb-24 text-center">
         {/* Headline */}
         <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] tracking-tight mb-6">
           Stop Missing Calls.
