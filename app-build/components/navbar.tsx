@@ -39,12 +39,13 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo-1.png"
+            src="/logo.png"
             alt="TX Trade Shop"
-            width={1874}
-            height={591}
+            width={2498}
+            height={789}
             className="h-16 w-auto"
             priority
+            unoptimized
           />
         </Link>
 
@@ -95,11 +96,12 @@ export function Navbar() {
             <SheetContent side="right" className="w-72 bg-white border-l border-warm-cream-dark">
               <SheetTitle className="px-4 pt-4 pb-2">
                 <Image
-                  src="/logo-1.png"
+                  src="/logo.png"
                   alt="TX Trade Shop"
-                  width={1826}
-                  height={565}
+                  width={2498}
+                  height={789}
                   className="h-10 w-auto"
+                  unoptimized
                 />
               </SheetTitle>
               <nav className="flex flex-col px-4 pt-2">
