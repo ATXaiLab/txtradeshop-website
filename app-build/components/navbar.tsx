@@ -39,11 +39,11 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/main-logo.png"
+            src="/logo-1.png"
             alt="TX Trade Shop"
-            width={160}
-            height={54}
-            className={`h-9 w-auto transition-all duration-300 ${scrolled ? "" : "brightness-200"}`}
+            width={1984}
+            height={792}
+            className="h-10 w-auto"
             priority
           />
         </Link>
@@ -93,8 +93,14 @@ export function Navbar() {
               <span className="sr-only">Menu</span>
             </SheetTrigger>
             <SheetContent side="right" className="w-72 bg-white border-l border-warm-cream-dark">
-              <SheetTitle className="font-heading text-workshop-blue text-lg px-4 pt-4 pb-2">
-                TX Trade Shop
+              <SheetTitle className="px-4 pt-4 pb-2">
+                <Image
+                  src="/logo-1.png"
+                  alt="TX Trade Shop"
+                  width={1984}
+                  height={792}
+                  className="h-10 w-auto"
+                />
               </SheetTitle>
               <nav className="flex flex-col px-4 pt-2">
                 {navLinks.map((link) => (
