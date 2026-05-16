@@ -48,7 +48,7 @@ export function Navbar() {
             unoptimized
           />
         </Link>
-        <nav className="flex items-center gap-8 mt-2">
+        <nav className="flex items-center justify-center gap-10 mt-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -62,13 +62,6 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="#book"
-            className="inline-flex items-center gap-1.5 bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors duration-200"
-          >
-            Book a Free Audit
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
         </nav>
       </div>
 
