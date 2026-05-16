@@ -35,15 +35,15 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-18">
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo-1.png"
             alt="TX Trade Shop"
-            width={1984}
-            height={792}
-            className="h-10 w-auto"
+            width={1826}
+            height={565}
+            className="h-16 w-auto"
             priority
           />
         </Link>
@@ -97,8 +97,8 @@ export function Navbar() {
                 <Image
                   src="/logo-1.png"
                   alt="TX Trade Shop"
-                  width={1984}
-                  height={792}
+                  width={1826}
+                  height={565}
                   className="h-10 w-auto"
                 />
               </SheetTitle>
