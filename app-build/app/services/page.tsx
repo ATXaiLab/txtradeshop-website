@@ -151,8 +151,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Tier sections */}
-      {tiers.map((tier, idx) => (
-        <section key={tier.id} id={tier.id} className={`py-14 sm:py-20 ${idx % 2 === 0 ? "bg-white" : "bg-warm-cream"}`}>
+      {tiers.map((tier) => (
+        <section key={tier.id} id={tier.id} className="py-14 sm:py-20 bg-warm-cream border-t border-warm-cream-dark">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-xs font-bold tracking-widest text-dirt-orange">{tier.tier}</span>
