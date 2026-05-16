@@ -35,22 +35,20 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
+      {/* Desktop: centered logo + nav row below */}
+      <div className="hidden md:flex flex-col items-center pt-4 pb-2 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Link href="/">
           <Image
             src="/logo.png"
             alt="TX Trade Shop"
             width={2498}
             height={789}
-            className="h-16 w-auto"
+            className="h-20 w-auto"
             priority
             unoptimized
           />
         </Link>
-
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <nav className="flex items-center gap-8 mt-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -71,10 +69,23 @@ export function Navbar() {
             Book a Free Audit
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
-        </div>
+        </nav>
+      </div>
 
-        {/* Mobile nav */}
-        <div className="md:hidden flex items-center gap-3">
+      {/* Mobile: logo left + hamburger right */}
+      <div className="md:hidden flex items-center justify-between h-20 px-4">
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="TX Trade Shop"
+            width={2498}
+            height={789}
+            className="h-14 w-auto"
+            priority
+            unoptimized
+          />
+        </Link>
+        <div className="flex items-center gap-3">
           <a
             href="#book"
             className="inline-flex items-center gap-1 bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-3 py-2 rounded-lg text-sm transition-colors"
@@ -127,7 +138,7 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
