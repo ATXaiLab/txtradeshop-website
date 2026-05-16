@@ -62,9 +62,9 @@ export function HeroSection() {
       {/* Bottom stats bar */}
       <div className="relative z-10 border-t border-white/8">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-wrap justify-center sm:justify-start gap-8 sm:gap-16">
+          <div className="flex flex-wrap justify-center gap-8 sm:gap-16">
             {[
-              { value: "30+", label: "Austin trade businesses" },
+              { value: "29", label: "Austin trade businesses" },
               { value: "$1.2M+", label: "in additional revenue tracked" },
               { value: "3,400+", label: "missed calls recovered" },
             ].map((stat) => (

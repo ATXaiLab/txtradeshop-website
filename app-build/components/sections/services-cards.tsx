@@ -12,7 +12,6 @@ const tiers = [
     features: [
       { icon: Mail, text: "Professional email + custom domain" },
       { icon: PhoneIncoming, text: "AI receptionist — 24/7 call answering" },
-      { icon: Star, text: "Review automation wired to job completions" },
       { icon: Globe, text: "Google Business Profile setup + optimization" },
     ],
     price: "$895",
@@ -31,6 +30,7 @@ const tiers = [
     pitch: "You've fixed the bleeding. Now your business needs to actually look like a real company — to customers, to Google, and to itself. Same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
     features: [
       { icon: Check, text: "Everything in Foundation" },
+      { icon: Globe, text: "Professional Business Website (5 pages)" },
       { icon: Megaphone, text: "Social content pipeline — 2 posts/week, ~15 min owner time" },
       { icon: FileText, text: "AI quote + estimate generation in your voice" },
       { icon: Mic, text: "Review automation with negative-feedback escalation path" },
@@ -90,7 +90,7 @@ export function ServicesCards() {
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className={`flex flex-col p-6 sm:p-8 ${tier.accent ? "bg-workshop-blue-dark" : "bg-white"}`}
+              className={`flex flex-col p-6 sm:p-8 ${tier.accent ? "bg-workshop-blue-dark" : "bg-warm-cream"}`}
             >
               <div className="mb-5">
                 <span className={`text-xs font-bold uppercase tracking-widest ${tier.accent ? "text-dirt-orange" : "text-charcoal-light"}`}>
@@ -120,13 +120,13 @@ export function ServicesCards() {
               </ul>
 
               <div className={`pt-5 border-t ${tier.accent ? "border-white/10" : "border-warm-cream-dark"}`}>
-                <div className="mb-1 flex items-baseline gap-2 flex-wrap">
+                <div className="mb-1">
                   <span className={`font-heading font-bold text-2xl sm:text-3xl ${tier.accent ? "text-white" : "text-charcoal"}`}>
                     {tier.price}
                   </span>
-                  <span className={`text-sm ${tier.accent ? "text-warm-cream/50" : "text-charcoal-light"}`}>
+                  <div className={`text-sm mt-0.5 ${tier.accent ? "text-warm-cream/50" : "text-charcoal-light"}`}>
                     {tier.priceNote}
-                  </span>
+                  </div>
                 </div>
                 {tier.splitPay && (
                   <p className={`text-xs mb-1 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>

@@ -22,11 +22,10 @@ const tiers = [
     tier: "TIER 1",
     name: "Foundation Setup",
     tagline: "STOP THE BLEEDING",
-    pitch: "The three systems every trade business needs before anything else makes sense: a professional email, an AI receptionist that answers every call, review automation that fills your Google profile, and Google Business Profile set up correctly. If you're still operating from a Gmail address and missing calls, this is where you start. Nothing else matters until these are running.",
+    pitch: "The foundations every trade business needs before anything else makes sense: a professional email, an AI receptionist that answers every call, and Google Business Profile set up correctly. If you're still operating from a Gmail address and missing calls, this is where you start. Nothing else matters until these are running.",
     features: [
       { icon: Mail, title: "Professional email + custom domain", desc: "We register your domain, set up Google Workspace or Microsoft 365, migrate any existing email, and configure professional signatures for everyone on the team." },
       { icon: PhoneIncoming, title: "AI receptionist (24/7 call answering)", desc: "Configured with your actual call scripts, services, pricing rules, and booking calendar. Answers calls when you're on a job, asleep, or on vacation." },
-      { icon: Star, title: "Review automation", desc: "Wired into your existing job workflow. Every completed job triggers a review request. Negative feedback gets routed to you privately." },
       { icon: Globe, title: "Google Business Profile setup + optimization", desc: "The real lead driver for local trades. We handle setup, photo population, and review integration so your profile actually ranks." },
       { icon: Users, title: "One 60-minute training session", desc: "Walkthrough so you know how to use what's been set up." },
       { icon: CalendarCheck, title: "30-day check-in call", desc: "We tune the configuration based on the first month of real calls and reviews." },
@@ -46,6 +45,7 @@ const tiers = [
     pitch: "You've fixed the bleeding. Now your business needs to actually look like a real company — to customers, to Google, and to itself. Same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
     features: [
       { icon: Check, title: "Everything in Foundation", desc: "Email, AI receptionist, review automation, Google Business Profile — all included and already running." },
+      { icon: Globe, title: "Professional Business Website (5 pages)", desc: "AI-built but human-edited, with copy that actually sells. Mobile-first. Loads fast. Five pages: Home, Services, About, Contact, and one more." },
       { icon: Megaphone, title: "Social content pipeline", desc: "Buffer, Pictory, and Canva configured. Plus a documented workflow for turning CompanyCam photos into 2 polished posts per week. Total owner time: ~15 minutes a week." },
       { icon: FileText, title: "AI quote and estimate generation", desc: "Custom template loaded with your pricing, terminology, brand voice. 5 minutes of voice notes → polished estimate in 60 seconds." },
       { icon: Star, title: "Review automation with negative-feedback escalation", desc: "Same review flow as Foundation, upgraded to route negative responses to you privately before they hit Google." },
@@ -86,8 +86,9 @@ const tiers = [
 const comparisonRows = [
   { feature: "Professional email + domain", t1: true, t2: true, t3: true },
   { feature: "AI receptionist (24/7)", t1: true, t2: true, t3: true },
-  { feature: "Review automation", t1: true, t2: true, t3: true },
+  { feature: "Review automation", t1: false, t2: true, t3: true },
   { feature: "Google Business Profile", t1: true, t2: true, t3: true },
+  { feature: "Professional Business Website (5 pages)", t1: false, t2: true, t3: true },
   { feature: "Social content pipeline", t1: false, t2: true, t3: true },
   { feature: "AI quote generation", t1: false, t2: true, t3: true },
   { feature: "Review escalation path", t1: false, t2: true, t3: true },

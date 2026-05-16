@@ -12,7 +12,7 @@ const convictions = [
   {
     number: "03",
     headline: "Honesty over enthusiasm. Always.",
-    body: "About 15% of the audit calls we run end with us telling someone they don't need us yet — that they should fix something simpler first. We'd rather lose a sale than sell something that doesn't fit. The \"Who This Isn't For\" section on this page is part of the offer, not a disclaimer.",
+    body: "Roughly 15% of our audit calls end with us telling the prospect not to hire us — that a simpler fix gets them further than we would. We'd rather lose the sale than land one that doesn't fit. The \"Who This Isn't For\" section below is part of the offer, not fine print.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function ConvictionsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-warm-cream-dark border border-warm-cream-dark rounded-xl overflow-hidden">
           {convictions.map((c) => (
-            <div key={c.number} className="bg-white p-7 sm:p-8">
+            <div key={c.number} className="bg-warm-cream p-7 sm:p-8">
               <div className="font-heading font-bold text-4xl text-warm-cream-dark mb-5 select-none">
                 {c.number}
               </div>

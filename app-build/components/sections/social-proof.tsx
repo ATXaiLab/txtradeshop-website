@@ -57,7 +57,7 @@ export function SocialProof() {
               key={study.business}
               className={`grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-8 ${
                 i < caseStudies.length - 1 ? "border-b border-warm-cream-dark" : ""
-              } ${i % 2 === 0 ? "bg-white" : "bg-warm-cream/40"}`}
+              } ${i % 2 === 0 ? "bg-warm-cream" : "bg-warm-cream/60"}`}
             >
               <div className="text-center md:text-left">
                 <div className="text-xs font-bold uppercase tracking-widest text-charcoal-light mb-3">
@@ -83,7 +83,7 @@ export function SocialProof() {
           {pullQuotes.map((quote) => (
             <div
               key={quote.location}
-              className="border border-warm-cream-dark rounded-xl p-5 sm:p-6 bg-white text-center hover:border-workshop-blue/20 transition-colors"
+              className="border border-warm-cream-dark rounded-xl p-5 sm:p-6 bg-warm-cream text-center hover:border-workshop-blue/20 transition-colors"
             >
               <p className="text-charcoal text-sm font-medium leading-relaxed mb-3">
                 &ldquo;{quote.text}&rdquo;
