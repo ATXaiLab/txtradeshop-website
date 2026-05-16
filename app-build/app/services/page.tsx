@@ -10,6 +10,7 @@ import {
   BookOpen, CalendarCheck, Wrench, Clock,
 } from "lucide-react";
 import { WhoThisIsntFor } from "@/components/sections/who-this-isnt-for";
+import { BuyButton } from "@/components/checkout-modal";
 
 export const metadata: Metadata = {
   title: "Services — TX Trade Shop",
@@ -35,6 +36,8 @@ const tiers = [
     price: "$895", priceNote: "one-time", timeline: "7–10 business days",
     roi: "One recovered missed call typically pays for this twice over.",
     splitPay: null,
+    stripeId: "tier1",
+    splitStripeId: null,
     accent: false,
   },
   {
@@ -57,6 +60,8 @@ const tiers = [
     price: "$2,750", priceNote: "one-time", timeline: "3–4 weeks",
     roi: "Most owners upgrade to Tier 3 within 6 months once the foundations are humming.",
     splitPay: "$1,850 upfront + $225/mo × 6",
+    stripeId: "tier2-full",
+    splitStripeId: "tier2-split",
     accent: true,
   },
   {
@@ -79,6 +84,8 @@ const tiers = [
     price: "$8,950", priceNote: "setup + $750/mo × 3", timeline: "6–8 weeks",
     roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",
     splitPay: "$8,750 total. Optional retainer from month 4 at $500–$750/mo.",
+    stripeId: "tier3",
+    splitStripeId: null,
     accent: false,
   },
 ];
@@ -197,9 +204,25 @@ export default function ServicesPage() {
                   <div className="text-xs sm:text-sm text-charcoal-light">Timeline: {tier.timeline}</div>
                   <div className="text-xs sm:text-sm text-charcoal-light italic mt-0.5">{tier.roi}</div>
                 </div>
-                <Button asChild className="bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-6 py-5 rounded-lg cursor-pointer w-full sm:w-auto">
-                  <a href="/#book">Book a Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
-                </Button>
+                <div className="flex flex-col gap-2 w-full sm:w-auto">
+                  <BuyButton
+                    tierId={tier.stripeId}
+                    tierName={tier.name}
+                    label="Get Started"
+                    className="bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-6 py-3 rounded-lg cursor-pointer text-sm w-full sm:w-auto transition-colors"
+                  />
+                  {tier.splitStripeId && (
+                    <BuyButton
+                      tierId={tier.splitStripeId}
+                      tierName={`${tier.name} — Split Pay`}
+                      label="Split Pay ($1,850 upfront)"
+                      className="bg-white hover:bg-warm-cream border border-warm-cream-dark text-charcoal font-semibold px-6 py-3 rounded-lg cursor-pointer text-sm w-full sm:w-auto transition-colors"
+                    />
+                  )}
+                  <Button asChild variant="ghost" className="text-charcoal-light hover:text-charcoal text-xs px-6 cursor-pointer w-full sm:w-auto">
+                    <a href="/#book">Book audit instead <ArrowRight className="w-3 h-3 ml-1" /></a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

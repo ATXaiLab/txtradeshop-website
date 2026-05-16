@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { BuyButton } from "@/components/checkout-modal";
 import { ArrowRight, Check, Mail, PhoneIncoming, Star, Globe, Megaphone, FileText, Mic, Users, BookOpen, CalendarCheck, Wrench } from "lucide-react";
 
 const tiers = [
@@ -17,6 +18,7 @@ const tiers = [
     price: "$895",
     priceNote: "one-time",
     splitPay: null,
+    stripeId: "tier1",
     bestFor: "Under $200K revenue",
     timeline: "7–10 business days",
     roi: "One recovered missed call typically pays for this twice over.",
@@ -38,6 +40,7 @@ const tiers = [
     price: "$2,750",
     priceNote: "one-time",
     splitPay: "$1,850 upfront + $225/mo × 6",
+    stripeId: "tier2-full",
     bestFor: "$200K–$500K revenue",
     timeline: "3–4 weeks",
     roi: "Most owners upgrade to Tier 3 within 6 months once the foundations are humming.",
@@ -60,6 +63,7 @@ const tiers = [
     price: "$8,950",
     priceNote: "setup + $750/mo × 3",
     splitPay: "$8,750 total",
+    stripeId: "tier3",
     bestFor: "$300K+ revenue",
     timeline: "6–8 weeks",
     roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",
@@ -138,6 +142,16 @@ export function ServicesCards() {
                 <p className={`text-xs mb-5 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
                   Best for {tier.bestFor} · {tier.timeline}
                 </p>
+                <BuyButton
+                  tierId={tier.stripeId}
+                  tierName={tier.name}
+                  label="Get Started"
+                  className={`w-full mb-3 py-2.5 px-4 rounded-lg text-sm font-semibold transition-colors cursor-pointer ${
+                    tier.accent
+                      ? "bg-dirt-orange hover:bg-dirt-orange-dark text-white"
+                      : "bg-workshop-blue hover:bg-workshop-blue-dark text-white"
+                  }`}
+                />
                 <Link
                   href="/services"
                   className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors ${
