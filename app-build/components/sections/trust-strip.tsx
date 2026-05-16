@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 
-const trades = ["HVAC", "Plumbing", "Electrical", "Roofing", "Landscaping"];
+const trades = ["HVAC", "Plumbing", "Electrical", "Roofing", "Remodeling", "Service", "Landscaping"];
 
 export function TrustStrip() {
   return (
