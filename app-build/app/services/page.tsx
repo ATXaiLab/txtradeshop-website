@@ -6,8 +6,8 @@ import {
 } from "@/components/ui/table";
 import {
   ArrowRight, Check, X, Mail, Phone,
-  PhoneIncoming, Star, Megaphone, FileText, Globe, Mic, Users,
-  BookOpen, CalendarCheck, Wrench, Clock,
+  PhoneIncoming, Megaphone, FileText, Globe, Mic, Users,
+  BookOpen, CalendarCheck, Wrench, Clock, ClipboardList,
 } from "lucide-react";
 import { WhoThisIsntFor } from "@/components/sections/who-this-isnt-for";
 import { BuyButton } from "@/components/checkout-modal";
@@ -23,13 +23,14 @@ const tiers = [
     tier: "TIER 1",
     name: "Foundation Setup",
     tagline: "STOP THE BLEEDING",
-    pitch: "The foundations every trade business needs before anything else makes sense: a professional email, an AI receptionist that answers every call, and Google Business Profile set up correctly. If you're still operating from a Gmail address and missing calls, this is where you start. Nothing else matters until these are running.",
+    pitch: "The four foundations every trade business needs before anything else makes sense: a professional email, an AI receptionist that answers every call, a complete audit of your review situation across every platform, and Google Business Profile set up correctly. If you're still operating from a Gmail address and missing calls, this is where you start. Nothing else matters until these are running.",
     features: [
       { icon: Mail, title: "Professional email + custom domain", desc: "We register your domain, set up Google Workspace or Microsoft 365, migrate any existing email, and configure professional signatures for everyone on the team." },
-      { icon: PhoneIncoming, title: "AI receptionist (24/7 call answering)", desc: "Configured with your actual call scripts, services, pricing rules, and booking calendar. Answers calls when you're on a job, asleep, or on vacation." },
-      { icon: Globe, title: "Google Business Profile setup + optimization", desc: "The real lead driver for local trades. We handle setup, photo population, and review integration so your profile actually ranks." },
-      { icon: Users, title: "One 60-minute training session", desc: "Walkthrough so you know how to use what's been set up." },
-      { icon: CalendarCheck, title: "30-day check-in call", desc: "We tune the configuration based on the first month of real calls and reviews." },
+      { icon: PhoneIncoming, title: "AI receptionist (24/7 call answering)", desc: "Configured with your actual call scripts, services, pricing rules, and booking calendar. Answers calls when you're on a job, asleep, or on vacation. Texts you a summary of every conversation in real time." },
+      { icon: ClipboardList, title: "Complete Automated Customer Review Audit", desc: "Full audit of your review situation across Google, Yelp, Facebook, BBB, Angi, and trade-specific directories. We pull every review, identify negative ones that never got a response, flag what's silently hurting you in search results, and benchmark you against your top 3 competitors. You get a written 8–12 page report covering exactly where the gaps are, what to fix first, and what each fix is worth in projected new business." },
+      { icon: Globe, title: "Google Business Profile setup + optimization", desc: "The real lead driver for local trades. We handle setup, photo population, and review flow integration so your profile actually ranks." },
+      { icon: Users, title: "One 60-minute training session", desc: "Walkthrough so you know how to read AI receptionist transcripts, respond to reviews from your phone, and use the audit report." },
+      { icon: CalendarCheck, title: "30-day check-in call", desc: "We tune the configuration based on the first month of real calls and reviews. Most clients have one or two small adjustments. Some have none." },
     ],
     forList: ["Trade businesses doing under $200K in annual revenue", "Anyone still using a personal Gmail for business", "Solo operators or 2–3 person shops", "Owners who know they're missing calls but haven't done anything about it"],
     notForList: ["Businesses already at $300K+ — you'll outgrow this in 6 months. Start with Growth Engine instead."],
@@ -47,7 +48,7 @@ const tiers = [
     tagline: "LOOK AND OPERATE LIKE A REAL COMPANY",
     pitch: "You've fixed the bleeding. Now your business needs to actually look like a real company — to customers, to Google, and to itself. Same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
     features: [
-      { icon: Check, title: "Everything in Foundation", desc: "Email, AI receptionist, review automation, Google Business Profile — all included and already running." },
+      { icon: Check, title: "Everything in Foundation", desc: "Email, AI receptionist, Complete Customer Review Audit, Google Business Profile — all included and already running. The review automation below builds on the audit from Foundation." },
       { icon: Globe, title: "Professional Business Website (5 pages)", desc: "AI-built but human-edited, with copy that actually sells. Mobile-first. Loads fast. Five pages: Home, Services, About, Contact, and one more." },
       { icon: Megaphone, title: "Social content pipeline", desc: "Buffer, Pictory, and Canva configured. Plus a documented workflow for turning CompanyCam photos into 2 polished posts per week. Total owner time: ~15 minutes a week." },
       { icon: FileText, title: "AI quote and estimate generation", desc: "Custom template loaded with your pricing, terminology, brand voice. 5 minutes of voice notes → polished estimate in 60 seconds." },
@@ -93,7 +94,8 @@ const tiers = [
 const comparisonRows = [
   { feature: "Professional email + domain", t1: true, t2: true, t3: true },
   { feature: "AI receptionist (24/7)", t1: true, t2: true, t3: true },
-  { feature: "Review automation", t1: false, t2: true, t3: true },
+  { feature: "Complete Customer Review Audit", t1: true, t2: true, t3: true },
+  { feature: "Review automation + escalation path", t1: false, t2: true, t3: true },
   { feature: "Google Business Profile", t1: true, t2: true, t3: true },
   { feature: "Professional Business Website (5 pages)", t1: false, t2: true, t3: true },
   { feature: "Social content pipeline", t1: false, t2: true, t3: true },

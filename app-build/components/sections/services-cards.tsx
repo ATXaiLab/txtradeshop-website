@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BuyButton } from "@/components/checkout-modal";
-import { ArrowRight, Check, Mail, PhoneIncoming, Star, Globe, Megaphone, FileText, Mic, Users, BookOpen, CalendarCheck, Wrench } from "lucide-react";
+import { ArrowRight, Check, Mail, PhoneIncoming, Globe, Megaphone, FileText, Mic, Users, BookOpen, CalendarCheck, Wrench, ClipboardList } from "lucide-react";
 
 const tiers = [
   {
@@ -9,10 +9,11 @@ const tiers = [
     tier: "Tier 1",
     name: "Foundation Setup",
     tagline: "Stop the bleeding.",
-    pitch: "Every call answered. Professional email that doesn't say @gmail.com. Google Business Profile set up and working. The three foundations every trade business needs before anything else makes sense.",
+    pitch: "Every call answered. Professional email that doesn't say @gmail.com. A full audit of your review situation — written report, gaps identified, competitors benchmarked. Google Business Profile set up and working. The four foundations every trade business needs before anything else makes sense.",
     features: [
       { icon: Mail, text: "Professional email + custom domain" },
       { icon: PhoneIncoming, text: "AI receptionist — 24/7 call answering" },
+      { icon: ClipboardList, text: "Complete Automated Customer Review Audit" },
       { icon: Globe, text: "Google Business Profile setup + optimization" },
     ],
     price: "$895",
