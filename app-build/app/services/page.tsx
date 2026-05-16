@@ -5,10 +5,11 @@ import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
 } from "@/components/ui/table";
 import {
-  ArrowRight, Check, X, Mail, Phone, MapPin,
+  ArrowRight, Check, X, Mail, Phone,
   PhoneIncoming, Star, Megaphone, FileText, Globe, Mic, Users,
   BookOpen, CalendarCheck, Wrench, Clock,
 } from "lucide-react";
+import { WhoThisIsntFor } from "@/components/sections/who-this-isnt-for";
 
 export const metadata: Metadata = {
   title: "Services — TX Trade Shop",
@@ -21,18 +22,20 @@ const tiers = [
     tier: "TIER 1",
     name: "Foundation Setup",
     tagline: "STOP THE BLEEDING",
-    pitch: "The three systems every trade business needs before anything else makes sense: a professional email, an AI receptionist that answers every call, and review automation that fills your Google profile. If you're still operating from a Gmail address and missing calls, this is where you start. Nothing else matters until these three are running.",
+    pitch: "The three systems every trade business needs before anything else makes sense: a professional email, an AI receptionist that answers every call, review automation that fills your Google profile, and Google Business Profile set up correctly. If you're still operating from a Gmail address and missing calls, this is where you start. Nothing else matters until these are running.",
     features: [
       { icon: Mail, title: "Professional email + custom domain", desc: "We register your domain, set up Google Workspace or Microsoft 365, migrate any existing email, and configure professional signatures for everyone on the team." },
       { icon: PhoneIncoming, title: "AI receptionist (24/7 call answering)", desc: "Configured with your actual call scripts, services, pricing rules, and booking calendar. Answers calls when you're on a job, asleep, or on vacation." },
       { icon: Star, title: "Review automation", desc: "Wired into your existing job workflow. Every completed job triggers a review request. Negative feedback gets routed to you privately." },
+      { icon: Globe, title: "Google Business Profile setup + optimization", desc: "The real lead driver for local trades. We handle setup, photo population, and review integration so your profile actually ranks." },
       { icon: Users, title: "One 60-minute training session", desc: "Walkthrough so you know how to use what's been set up." },
       { icon: CalendarCheck, title: "30-day check-in call", desc: "We tune the configuration based on the first month of real calls and reviews." },
     ],
     forList: ["Trade businesses doing under $200K in annual revenue", "Anyone still using a personal Gmail for business", "Solo operators or 2–3 person shops", "Owners who know they're missing calls but haven't done anything about it"],
     notForList: ["Businesses already at $300K+ — you'll outgrow this in 6 months. Start with Growth Engine instead."],
-    price: "$1,250", priceNote: "one-time", timeline: "7–10 business days",
-    roi: "Break-even within 30 days, usually on one recovered missed call.",
+    price: "$895", priceNote: "one-time", timeline: "7–10 business days",
+    roi: "One recovered missed call typically pays for this twice over.",
+    splitPay: null,
     accent: false,
   },
   {
@@ -40,20 +43,20 @@ const tiers = [
     tier: "TIER 2",
     name: "Growth Engine",
     tagline: "LOOK AND OPERATE LIKE A REAL COMPANY",
-    pitch: "You've got the foundations. Now you need the systems that make customers actually find you, trust you when they do, and remember you afterward. Growth Engine is the leveling-up package — same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
+    pitch: "You've fixed the bleeding. Now your business needs to actually look like a real company — to customers, to Google, and to itself. Same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
     features: [
-      { icon: Check, title: "Everything in Foundation", desc: "Email, AI receptionist, review automation — all included." },
+      { icon: Check, title: "Everything in Foundation", desc: "Email, AI receptionist, review automation, Google Business Profile — all included and already running." },
       { icon: Megaphone, title: "Social content pipeline", desc: "Buffer, Pictory, and Canva configured. Plus a documented workflow for turning CompanyCam photos into 2 polished posts per week. Total owner time: ~15 minutes a week." },
       { icon: FileText, title: "AI quote and estimate generation", desc: "Custom template loaded with your pricing, terminology, brand voice. 5 minutes of voice notes → polished estimate in 60 seconds." },
-      { icon: Globe, title: "New website (5 pages)", desc: "AI-built but human-edited, with copy that actually sells. Mobile-first. Loads fast." },
-      { icon: MapPin, title: "Optimized Google Business Profile", desc: "The real lead driver for local trades. We handle setup, photo population, and review integration." },
+      { icon: Star, title: "Review automation with negative-feedback escalation", desc: "Same review flow as Foundation, upgraded to route negative responses to you privately before they hit Google." },
       { icon: Users, title: "Two 60-minute training sessions", desc: "One on the content pipeline, one on the quoting workflow." },
-      { icon: CalendarCheck, title: "30 days support + 60-day check-in", desc: "Email/Slack support while systems bed in." },
+      { icon: CalendarCheck, title: "30 days support + 60-day check-in", desc: "Email support while systems bed in. Second check-in at 60 days to tune." },
     ],
     forList: ["Businesses doing $200K–$500K that have outgrown manual everything", "Owners who want to stop being the bottleneck for marketing and quoting"],
     notForList: ["Sub-$200K businesses — start with Foundation, prove ROI, then upgrade", "$500K+ businesses with multiple crews — you need Full Operations"],
-    price: "$3,750", priceNote: "one-time, OR $2,500 + $300/mo for 6 months", timeline: "3–4 weeks",
-    roi: "Break-even in 60 days.",
+    price: "$2,750", priceNote: "one-time", timeline: "3–4 weeks",
+    roi: "Most owners upgrade to Tier 3 within 6 months once the foundations are humming.",
+    splitPay: "$1,850 upfront + $225/mo × 6",
     accent: true,
   },
   {
@@ -63,19 +66,19 @@ const tiers = [
     tagline: "EVERY OPERATIONAL GAP CLOSED",
     pitch: "The complete system. Every operational gap a small trade business has — closed, integrated, documented, and running without your daily attention. Built for businesses ready to grow past the point where the owner can hold everything in their head.",
     features: [
-      { icon: Check, title: "Everything in Growth Engine", desc: "All seven systems above, fully configured." },
+      { icon: Check, title: "Everything in Tiers 1 and 2", desc: "All systems above, fully configured and already running." },
       { icon: Mic, title: "Voice-to-invoice pipeline", desc: "End-of-job voice memo turns into a line-itemized invoice, customer thank-you, and follow-up reminder. Templates for your 5 most common job types." },
       { icon: Users, title: "Lead intake CRM + AI chat widget", desc: "Every website visitor captured, qualified, and followed up with — automatically, even at 11 PM on a Sunday." },
       { icon: Wrench, title: "CompanyCam rollout", desc: "All field staff onboarded. Geotagged photos. Documented usage SOP that ties directly into your social content pipeline." },
       { icon: CalendarCheck, title: "Recurring service reminder sequences", desc: "Email + text automation calibrated to your specific service cadence." },
-      { icon: BookOpen, title: "Custom playbook document", desc: "A written SOP you own. Every workflow, every tool, every login — documented. So you're never dependent on us." },
-      { icon: Users, title: "Team training for up to 5 staff", desc: "Hands-on sessions, recorded for future hires." },
+      { icon: BookOpen, title: "Custom playbook document", desc: "A written SOP you own. Every workflow, every tool, every login — documented so you're never dependent on us." },
       { icon: Clock, title: "90 days priority support + monthly reviews", desc: "We stay engaged through the full bedding-in period." },
     ],
     forList: ["$300K+ in annual revenue", "Multi-crew operations", "Owners who treat operational systems as an investment", "Businesses preparing for growth, hiring, or eventual sale"],
     notForList: ["Sub-$300K businesses — the ROI math doesn't work yet. Start smaller."],
-    price: "$9,500", priceNote: "setup + $750/mo for 3 months ($11,750 total)", timeline: "6–8 weeks",
-    roi: "Optional ongoing retainer: $500–$750/mo after month 3.",
+    price: "$8,950", priceNote: "setup + $750/mo × 3", timeline: "6–8 weeks",
+    roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",
+    splitPay: "$11,150 total. Optional retainer from month 4 at $500–$750/mo.",
     accent: false,
   },
 ];
@@ -84,18 +87,17 @@ const comparisonRows = [
   { feature: "Professional email + domain", t1: true, t2: true, t3: true },
   { feature: "AI receptionist (24/7)", t1: true, t2: true, t3: true },
   { feature: "Review automation", t1: true, t2: true, t3: true },
+  { feature: "Google Business Profile", t1: true, t2: true, t3: true },
   { feature: "Social content pipeline", t1: false, t2: true, t3: true },
   { feature: "AI quote generation", t1: false, t2: true, t3: true },
-  { feature: "Website (5 pages)", t1: false, t2: true, t3: true },
-  { feature: "Google Business Profile", t1: false, t2: true, t3: true },
+  { feature: "Review escalation path", t1: false, t2: true, t3: true },
   { feature: "Voice-to-invoice pipeline", t1: false, t2: false, t3: true },
   { feature: "Lead CRM + AI chat", t1: false, t2: false, t3: true },
   { feature: "CompanyCam rollout", t1: false, t2: false, t3: true },
   { feature: "Service reminders", t1: false, t2: false, t3: true },
   { feature: "Custom playbook (SOP)", t1: false, t2: false, t3: true },
-  { feature: "Team training (5 staff)", t1: false, t2: false, t3: true },
   { feature: "Training sessions", t1: "1×60min", t2: "2×60min", t3: "Full team" },
-  { feature: "Support period", t1: "30 days", t2: "30 days", t3: "90 days" },
+  { feature: "Support period", t1: "30 days", t2: "30+60 days", t3: "90 days" },
 ];
 
 const timeline = [
@@ -132,7 +134,7 @@ export default function ServicesPage() {
               That&apos;s why every engagement starts with a free 20-minute audit. We&apos;ll look at your current setup, find the three biggest leaks, and tell you straight which tier (if any) makes sense. About 15% of the time we tell people they don&apos;t need us yet. We&apos;d rather lose a sale than sell you something that doesn&apos;t fit.
             </p>
             <Button asChild className="bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-6 py-5 rounded-lg cursor-pointer">
-              <a href="#book">Start with the Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
+              <a href="/#book">Start with the Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
             </Button>
           </div>
         </div>
@@ -181,16 +183,23 @@ export default function ServicesPage() {
             </div>
 
             {/* Pricing bar */}
-            <div className={`rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${tier.accent ? "bg-dirt-orange/10 border border-dirt-orange/20" : "bg-charcoal/5 border border-warm-cream-dark"}`}>
-              <div>
-                <span className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">{tier.price}</span>
-                <span className="text-charcoal-light text-sm ml-2">{tier.priceNote}</span>
-                <div className="text-xs sm:text-sm text-charcoal-light mt-1">Timeline: {tier.timeline}</div>
-                <div className="text-xs sm:text-sm text-charcoal-light">ROI: {tier.roi}</div>
+            <div className={`rounded-xl p-5 sm:p-6 ${tier.accent ? "bg-dirt-orange/10 border border-dirt-orange/20" : "bg-charcoal/5 border border-warm-cream-dark"}`}>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <div className="flex items-baseline gap-2 flex-wrap mb-1">
+                    <span className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">{tier.price}</span>
+                    <span className="text-charcoal-light text-sm">{tier.priceNote}</span>
+                  </div>
+                  {tier.splitPay && (
+                    <div className="text-xs sm:text-sm text-charcoal-light mb-1">or {tier.splitPay}</div>
+                  )}
+                  <div className="text-xs sm:text-sm text-charcoal-light">Timeline: {tier.timeline}</div>
+                  <div className="text-xs sm:text-sm text-charcoal-light italic mt-0.5">{tier.roi}</div>
+                </div>
+                <Button asChild className="bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-6 py-5 rounded-lg cursor-pointer w-full sm:w-auto">
+                  <a href="/#book">Book a Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
+                </Button>
               </div>
-              <Button asChild className="bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold px-6 py-5 rounded-lg cursor-pointer w-full sm:w-auto">
-                <a href="#book">Book a Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
-              </Button>
             </div>
           </div>
         </section>
@@ -229,9 +238,9 @@ export default function ServicesPage() {
               <TableHeader>
                 <TableRow className="bg-workshop-blue-dark">
                   <TableHead className="text-white font-semibold text-sm">Feature</TableHead>
-                  <TableHead className="text-white font-semibold text-center text-sm">Foundation<br /><span className="text-warm-cream/50 text-xs font-normal">$1,250</span></TableHead>
-                  <TableHead className="text-white font-semibold text-center text-sm">Growth Engine<br /><span className="text-warm-cream/50 text-xs font-normal">$3,750</span></TableHead>
-                  <TableHead className="text-white font-semibold text-center text-sm">Full Ops<br /><span className="text-warm-cream/50 text-xs font-normal">$11,750</span></TableHead>
+                  <TableHead className="text-white font-semibold text-center text-sm">Foundation<br /><span className="text-warm-cream/50 text-xs font-normal">$895</span></TableHead>
+                  <TableHead className="text-white font-semibold text-center text-sm">Growth Engine<br /><span className="text-warm-cream/50 text-xs font-normal">$2,750</span></TableHead>
+                  <TableHead className="text-white font-semibold text-center text-sm">Full Ops<br /><span className="text-warm-cream/50 text-xs font-normal">$11,150</span></TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -251,6 +260,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Who This Isn't For */}
+      <WhoThisIsntFor />
+
       {/* Final CTA */}
       <section className="bg-workshop-blue-dark py-14 sm:py-20 text-center">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,7 +271,7 @@ export default function ServicesPage() {
             Book the free 20-minute call. We&apos;ll look at your business, find the three biggest leaks, and tell you which tier (if any) actually fits. No pressure, no upsell.
           </p>
           <Button asChild size="lg" className="bg-dirt-orange hover:bg-dirt-orange-dark text-white font-semibold text-sm sm:text-base px-8 py-6 rounded-lg cursor-pointer w-full sm:w-auto">
-            <a href="#book">Book the Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
+            <a href="/#book">Book the Free Audit <ArrowRight className="w-4 h-4 ml-2" /></a>
           </Button>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 text-warm-cream/40 text-sm">
             <a href="mailto:corby@txtradeshop.com" className="hover:text-warm-cream/80 transition-colors flex items-center gap-1.5"><Mail className="w-4 h-4" />corby@txtradeshop.com</a>

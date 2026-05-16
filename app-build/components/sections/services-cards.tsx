@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, Mail, PhoneIncoming, Star, Megaphone, FileText, Globe, Mic, Users, BookOpen, CalendarCheck, Wrench } from "lucide-react";
+import { ArrowRight, Check, Mail, PhoneIncoming, Star, Globe, Megaphone, FileText, Mic, Users, BookOpen, CalendarCheck, Wrench } from "lucide-react";
 
 const tiers = [
   {
@@ -8,17 +8,19 @@ const tiers = [
     tier: "Tier 1",
     name: "Foundation Setup",
     tagline: "Stop the bleeding.",
-    description:
-      "Every call answered. Every customer asked for a review. Professional email that doesn't end in @gmail.com. The three foundations every trade business needs before anything else makes sense.",
+    pitch: "Every call answered. Professional email that doesn't say @gmail.com. Google Business Profile set up and working. The three foundations every trade business needs before anything else makes sense.",
     features: [
       { icon: Mail, text: "Professional email + custom domain" },
       { icon: PhoneIncoming, text: "AI receptionist — 24/7 call answering" },
-      { icon: Star, text: "Automated review generation" },
+      { icon: Star, text: "Review automation wired to job completions" },
+      { icon: Globe, text: "Google Business Profile setup + optimization" },
     ],
-    price: "$1,250",
+    price: "$895",
     priceNote: "one-time",
+    splitPay: null,
     bestFor: "Under $200K revenue",
     timeline: "7–10 business days",
+    roi: "One recovered missed call typically pays for this twice over.",
     accent: false,
   },
   {
@@ -26,39 +28,41 @@ const tiers = [
     name: "Growth Engine",
     tier: "Tier 2",
     tagline: "Look and operate like a real company.",
-    description:
-      "Everything in Foundation, plus the systems that turn your business from \"guy with a truck\" into a brand customers find, trust, and refer.",
+    pitch: "You've fixed the bleeding. Now your business needs to actually look like a real company — to customers, to Google, and to itself. Same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
     features: [
       { icon: Check, text: "Everything in Foundation" },
-      { icon: Megaphone, text: "Social content pipeline — 2 posts/week" },
-      { icon: FileText, text: "AI-powered quote and estimate generation" },
-      { icon: Globe, text: "New website + optimized Google Business Profile" },
+      { icon: Megaphone, text: "Social content pipeline — 2 posts/week, ~15 min owner time" },
+      { icon: FileText, text: "AI quote + estimate generation in your voice" },
+      { icon: Mic, text: "Review automation with negative-feedback escalation path" },
     ],
-    price: "$3,750",
+    price: "$2,750",
     priceNote: "one-time",
+    splitPay: "$1,850 upfront + $225/mo × 6",
     bestFor: "$200K–$500K revenue",
     timeline: "3–4 weeks",
+    roi: "Most owners upgrade to Tier 3 within 6 months once the foundations are humming.",
     accent: true,
   },
   {
     id: "full-ops",
     tier: "Tier 3",
-    name: "Full Operations",
+    name: "Full Operations Buildout",
     tagline: "Every operational gap closed.",
-    description:
-      "The complete system. All operational gaps closed, every workflow documented, every tool integrated. Built for trade businesses ready to scale without burning out the owner.",
+    pitch: "The complete system. Every operational gap a small trade business has — closed, integrated, documented, and running without the owner's daily attention. Built for businesses ready to grow past the point where the owner can hold everything in their head.",
     features: [
-      { icon: Check, text: "Everything in Growth Engine" },
-      { icon: Mic, text: "Voice-to-invoice pipeline" },
-      { icon: Users, text: "Lead intake CRM + AI chat widget" },
-      { icon: Wrench, text: "CompanyCam rollout to all field staff" },
-      { icon: CalendarCheck, text: "Recurring service reminders" },
-      { icon: BookOpen, text: "Custom playbook — your owned SOP doc" },
+      { icon: Check, text: "Everything in Tiers 1 and 2" },
+      { icon: Mic, text: "Voice-to-invoice pipeline for your 5 most common job types" },
+      { icon: Users, text: "Lead intake CRM + AI chat widget with auto follow-up" },
+      { icon: Wrench, text: "CompanyCam rollout with usage SOP for all field staff" },
+      { icon: CalendarCheck, text: "Recurring service reminder sequences (email + text)" },
+      { icon: BookOpen, text: "Custom playbook — a written SOP your business owns" },
     ],
-    price: "$9,500",
+    price: "$8,950",
     priceNote: "setup + $750/mo × 3",
+    splitPay: "$11,150 total. Optional retainer from month 4 at $500–$750/mo.",
     bestFor: "$300K+ revenue",
     timeline: "6–8 weeks",
+    roi: "Break-even in 2–3 months. One additional job per month at a $500 ticket covers this inside year one.",
     accent: false,
   },
 ];
@@ -77,7 +81,7 @@ export function ServicesCards() {
             <span className="text-workshop-blue">One outcome.</span>
           </h2>
           <p className="text-charcoal-light text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Most trade businesses don&apos;t need more software. They need the right software, set up correctly, working together.
+            Pick the tier that matches where your business is today. Every tier ends with a working system, real training, and documentation you own.
           </p>
         </div>
 
@@ -95,13 +99,13 @@ export function ServicesCards() {
                 <h3 className={`font-heading font-bold text-xl sm:text-2xl mt-1 mb-1 ${tier.accent ? "text-white" : "text-charcoal"}`}>
                   {tier.name}
                 </h3>
-                <p className={`text-sm font-medium ${tier.accent ? "text-warm-cream/70" : "text-charcoal-light"}`}>
-                  {tier.tagline}
+                <p className={`text-sm font-medium italic ${tier.accent ? "text-warm-cream/70" : "text-charcoal-light"}`}>
+                  &ldquo;{tier.tagline}&rdquo;
                 </p>
               </div>
 
               <p className={`text-sm leading-relaxed mb-6 ${tier.accent ? "text-warm-cream/60" : "text-charcoal-light"}`}>
-                {tier.description}
+                {tier.pitch}
               </p>
 
               <ul className="space-y-3 mb-8 flex-1">
@@ -116,16 +120,24 @@ export function ServicesCards() {
               </ul>
 
               <div className={`pt-5 border-t ${tier.accent ? "border-white/10" : "border-warm-cream-dark"}`}>
-                <div className="mb-1">
+                <div className="mb-1 flex items-baseline gap-2 flex-wrap">
                   <span className={`font-heading font-bold text-2xl sm:text-3xl ${tier.accent ? "text-white" : "text-charcoal"}`}>
                     {tier.price}
                   </span>
-                  <span className={`text-sm ml-2 ${tier.accent ? "text-warm-cream/50" : "text-charcoal-light"}`}>
+                  <span className={`text-sm ${tier.accent ? "text-warm-cream/50" : "text-charcoal-light"}`}>
                     {tier.priceNote}
                   </span>
                 </div>
-                <p className={`text-xs mb-4 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
+                {tier.splitPay && (
+                  <p className={`text-xs mb-1 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
+                    or {tier.splitPay}
+                  </p>
+                )}
+                <p className={`text-xs mb-1 ${tier.accent ? "text-warm-cream/40" : "text-charcoal-light"}`}>
                   Best for {tier.bestFor} · {tier.timeline}
+                </p>
+                <p className={`text-xs mb-5 italic ${tier.accent ? "text-warm-cream/35" : "text-charcoal-light"}`}>
+                  {tier.roi}
                 </p>
                 <Link
                   href="/services"
@@ -146,7 +158,7 @@ export function ServicesCards() {
         {/* Below CTA */}
         <div className="mt-8 sm:mt-10 pt-8 border-t border-warm-cream-dark text-center">
           <p className="text-charcoal-light text-sm max-w-md mx-auto mb-5">
-            Not sure which tier fits? About 15% of audit calls end with us telling you to wait. We&apos;d rather lose a sale than sell you something that doesn&apos;t fit.
+            Not sure which tier fits? The free 20-minute audit tells you. About 15% of the time we tell you to wait — we&apos;d rather lose the sale.
           </p>
           <Button
             asChild
