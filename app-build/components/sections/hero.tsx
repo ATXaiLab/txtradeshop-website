@@ -57,8 +57,8 @@ export function HeroSection() {
           <div className="flex flex-wrap justify-center gap-8 sm:gap-16">
             {[
               { value: "29", label: "Austin trade businesses" },
-              { value: "$1.2M+", label: "in additional revenue tracked" },
-              { value: "3,400+", label: "missed calls recovered" },
+              { value: "$845K", label: "in additional revenue tracked" },
+              { value: "1,600+", label: "missed calls recovered" },
             ].map((stat) => (
               <div key={stat.label} className="text-center sm:text-left">
                 <div className="font-heading font-bold text-xl sm:text-2xl text-white">{stat.value}</div>
