@@ -5,6 +5,11 @@ import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "About — TX Trade Shop",
   description: "I'm Corby. I fix the back-office systems trade businesses promise themselves they'll fix every January. Operations consulting in Austin, TX.",
+  openGraph: {
+    title: "About Corby — TX Trade Shop",
+    description: "I'm Corby. I fix the back-office systems trade businesses promise themselves they'll fix every January. Operations consulting in Austin, TX.",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {

@@ -14,7 +14,12 @@ import { BuyButton } from "@/components/checkout-modal";
 
 export const metadata: Metadata = {
   title: "Services — TX Trade Shop",
-  description: "Three tiers of operations systems for Austin trade businesses. Foundation Setup, Growth Engine, and Full Operations Buildout.",
+  description: "Three tiers of operations systems for Austin trade businesses. Foundation Setup ($895), Growth Engine ($2,750), and Full Operations Buildout ($8,950). Pick where you are today.",
+  openGraph: {
+    title: "Services — TX Trade Shop",
+    description: "Three tiers of operations systems for Austin trade businesses. Foundation Setup ($895), Growth Engine ($2,750), and Full Operations Buildout ($8,950).",
+    type: "website",
+  },
 };
 
 const tiers = [
@@ -49,7 +54,7 @@ const tiers = [
     pitch: "You've fixed the bleeding. Now your business needs to actually look like a real company — to customers, to Google, and to itself. Same tight operations as Foundation, plus the marketing and quoting infrastructure that turns \"guy with a truck\" into a recognizable local brand.",
     features: [
       { icon: Check, title: "Everything in Foundation", desc: "Email, AI receptionist, Complete Customer Review Audit, Google Business Profile — all included and already running. The review automation below builds on the audit from Foundation." },
-      { icon: Globe, title: "Professional Business Website (5 pages)", desc: "AI-built but human-edited, with copy that actually sells. Mobile-first. Loads fast. Five pages: Home, Services, About, Contact, and one more." },
+      { icon: Globe, title: "Professional Business Website (5 pages)", desc: "AI-built but human-edited, with copy that actually sells. Mobile-first. Loads fast. Five pages: Home, Services, About, Contact, and Case Studies." },
       { icon: Megaphone, title: "Social content pipeline", desc: "Buffer, Pictory, and Canva configured. Plus a documented workflow for turning CompanyCam photos into 2 polished posts per week. Total owner time: ~15 minutes a week." },
       { icon: FileText, title: "AI quote and estimate generation", desc: "Custom template loaded with your pricing, terminology, brand voice. 5 minutes of voice notes → polished estimate in 60 seconds." },
       { icon: Star, title: "Review automation with negative-feedback escalation", desc: "Same review flow as Foundation, upgraded to route negative responses to you privately before they hit Google." },
@@ -100,7 +105,6 @@ const comparisonRows = [
   { feature: "Professional Business Website (5 pages)", t1: false, t2: true, t3: true },
   { feature: "Social content pipeline", t1: false, t2: true, t3: true },
   { feature: "AI quote generation", t1: false, t2: true, t3: true },
-  { feature: "Review escalation path", t1: false, t2: true, t3: true },
   { feature: "Voice-to-invoice pipeline", t1: false, t2: false, t3: true },
   { feature: "Lead CRM + AI chat", t1: false, t2: false, t3: true },
   { feature: "CompanyCam rollout", t1: false, t2: false, t3: true },
@@ -275,7 +279,13 @@ export default function ServicesPage() {
                     <TableCell className="font-medium text-charcoal text-xs sm:text-sm">{row.feature}</TableCell>
                     {[row.t1, row.t2, row.t3].map((val, i) => (
                       <TableCell key={i} className="text-center">
-                        {val === true ? <Check className="w-4 h-4 text-green-600 mx-auto" /> : val === false ? <X className="w-4 h-4 text-charcoal-light/25 mx-auto" /> : <span className="text-xs sm:text-sm text-charcoal-light">{val}</span>}
+                        {val === true ? (
+                          <span style={{ color: "#15803d", fontWeight: 700, fontSize: "1rem" }}>✓</span>
+                        ) : val === false ? (
+                          <span style={{ color: "#C5BDB0" }}>—</span>
+                        ) : (
+                          <span className="text-xs sm:text-sm text-charcoal-light">{val}</span>
+                        )}
                       </TableCell>
                     ))}
                   </TableRow>

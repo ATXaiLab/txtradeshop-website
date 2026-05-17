@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { StickyBookCTA } from "@/components/sticky-cta";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <StickyBookCTA />
       </body>
     </html>
   );

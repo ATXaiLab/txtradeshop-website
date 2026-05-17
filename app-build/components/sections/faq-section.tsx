@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "What's the actual ROI? When do I break even?",
-    a: "For Foundation ($1,250), most clients break even within 30 days — usually on a single recovered missed call that turned into a booked job. For Full Operations ($11,750), break-even typically happens in months 2–3, driven by recovered calls plus repeat customer reactivation. We'll run the math on your specific business during the audit call.",
+    a: "For Foundation ($895), most clients break even within 30 days — usually on a single recovered missed call that turned into a booked job. For Full Operations ($8,950 + $750/mo × 3), break-even typically happens in months 2–3, driven by recovered calls plus repeat customer reactivation. We'll run the math on your specific business during the audit call.",
   },
   {
     q: "What happens after the setup is done?",

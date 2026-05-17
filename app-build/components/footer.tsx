@@ -16,10 +16,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Image
-              src="/main-logo.png"
+              src="/logo.png"
               alt="TX Trade Shop"
-              width={160}
-              height={54}
+              width={2498}
+              height={789}
+              unoptimized
               className="h-10 w-auto brightness-200"
             />
             <p className="text-sm leading-relaxed max-w-xs">

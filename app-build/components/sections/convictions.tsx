@@ -32,9 +32,6 @@ export function ConvictionsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-warm-cream-dark border border-warm-cream-dark rounded-xl overflow-hidden">
           {convictions.map((c) => (
             <div key={c.number} className="bg-warm-cream p-7 sm:p-8">
-              <div className="font-heading font-bold text-4xl text-warm-cream-dark mb-5 select-none">
-                {c.number}
-              </div>
               <h3 className="font-heading font-bold text-base sm:text-lg text-charcoal mb-3 leading-snug">
                 {c.headline}
               </h3>

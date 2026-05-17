@@ -114,6 +114,22 @@
   }
 }
 
+/* Accordion animations */
+@keyframes accordion-down {
+  from { height: 0; overflow: hidden; }
+  to { height: var(--accordion-panel-height, auto); overflow: hidden; }
+}
+@keyframes accordion-up {
+  from { height: var(--accordion-panel-height, auto); overflow: hidden; }
+  to { height: 0; overflow: hidden; }
+}
+.animate-accordion-down {
+  animation: accordion-down 200ms ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 200ms ease-out;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
