@@ -18,12 +18,12 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "TX Trade Shop — Operations Systems for Austin Trade Businesses",
+  title: "TX Trade Shop — Operations Systems for Central Texas Trade Businesses",
   description:
     "We set up the systems that answer every call, follow up on every lead, and ask every customer for a review. Operations consulting for HVAC, plumbing, electrical, roofing, and landscaping businesses in Austin, TX.",
   keywords: [
     "operations consultant",
-    "Austin trade businesses",
+    "Central Texas trade businesses",
     "HVAC operations",
     "plumbing business systems",
     "AI receptionist",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Austin TX",
   ],
   openGraph: {
-    title: "TX Trade Shop — Operations Systems for Austin Trade Businesses",
+    title: "TX Trade Shop — Operations Systems for Central Texas Trade Businesses",
     description:
       "We set up the systems that answer every call, follow up on every lead, and ask every customer for a review.",
     type: "website",

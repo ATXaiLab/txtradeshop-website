@@ -24,7 +24,7 @@ export function Footer() {
               className="h-10 w-auto brightness-200"
             />
             <p className="text-sm leading-relaxed max-w-xs">
-              Operations systems for Austin&apos;s trade businesses. We set up
+              Operations systems for Central Texas trade businesses. We set up
               what you keep saying you&apos;ll set up.
             </p>
           </div>

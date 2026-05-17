@@ -14,10 +14,10 @@ import { BuyButton } from "@/components/checkout-modal";
 
 export const metadata: Metadata = {
   title: "Services — TX Trade Shop",
-  description: "Three tiers of operations systems for Austin trade businesses. Foundation Setup ($895), Growth Engine ($2,750), and Full Operations Buildout ($8,950). Pick where you are today.",
+  description: "Three tiers of operations systems for Central Texas trade businesses. Foundation Setup ($895), Growth Engine ($2,750), and Full Operations Buildout ($8,950). Pick where you are today.",
   openGraph: {
     title: "Services — TX Trade Shop",
-    description: "Three tiers of operations systems for Austin trade businesses. Foundation Setup ($895), Growth Engine ($2,750), and Full Operations Buildout ($8,950).",
+    description: "Three tiers of operations systems for Central Texas trade businesses. Foundation Setup ($895), Growth Engine ($2,750), and Full Operations Buildout ($8,950).",
     type: "website",
   },
 };

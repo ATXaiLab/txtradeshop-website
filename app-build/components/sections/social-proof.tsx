@@ -45,7 +45,7 @@ export function SocialProof() {
             Results
           </p>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-charcoal leading-tight">
-            Real Austin businesses.{" "}
+            Real Central Texas businesses.{" "}
             <span className="text-workshop-blue">Real numbers.</span>
           </h2>
         </div>

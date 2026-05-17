@@ -30,7 +30,7 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p className="text-warm-cream/60 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          Operations systems for Austin&apos;s trade businesses — HVAC, plumbing, electrical, roofing, remodeling, service, and landscaping.
+          Operations systems for Central Texas trade businesses — HVAC, plumbing, electrical, roofing, remodeling, service, and landscaping.
           We set up the systems that answer every call, follow up on every lead, and ask every customer for a review.{" "}
           <span className="text-warm-cream/90 font-medium">AI does the heavy lifting. You don&apos;t have to learn it.</span>
         </p>
@@ -56,7 +56,7 @@ export function HeroSection() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-wrap justify-center gap-8 sm:gap-16">
             {[
-              { value: "29", label: "Austin trade businesses" },
+              { value: "29", label: "Central Texas trade businesses" },
               { value: "$845K", label: "in additional revenue tracked" },
               { value: "1,600+", label: "missed calls recovered" },
             ].map((stat) => (
