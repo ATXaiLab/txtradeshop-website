@@ -19,8 +19,8 @@ const tiers: Record<string, { name: string; amount: number; note?: string }> = {
   },
   "tier3": {
     name: "Full Operations Buildout",
-    amount: 895000, // $8,950.00
-    note: "Monthly installments of $750 × 3 will be invoiced separately.",
+    amount: 670000, // $6,700.00 upfront — monthly installments of $750 × 3 invoiced separately (total: $8,950)
+    note: "Monthly installments of $750 × 3 will be invoiced separately. Total engagement: $8,950.",
   },
 };
 

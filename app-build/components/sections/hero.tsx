@@ -66,6 +66,9 @@ export function HeroSection() {
               </div>
             ))}
           </div>
+          <p className="text-center text-warm-cream/20 text-xs mt-4">
+            As of May 2026 · Active client engagements in Central Texas
+          </p>
         </div>
       </div>
     </section>
